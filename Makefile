@@ -31,7 +31,7 @@ dkms.conf: ./scripts/mkdkmsconf.sh .always-make
 clean-dkms.conf:
 	$(RM) dkms.conf
 
-$(DKMS_TARBALL): dkms.conf Makefile lotspeed.c
+$(DKMS_TARBALL): dkms.conf Makefile lotspeedv1.c
 	$(TAR) zcf $(DKMS_TARBALL) \
 		--transform 's,^,./dkms_source_tree/,' \
 		dkms.conf \
